@@ -437,5 +437,38 @@ input::placeholder{
 .night {
     background: linear-gradient(135deg, #141E30, #243B55);
 }
+.time-box{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(8px);
+
+}
+
+.time-box h4{
+
+    margin:0;
+
+    font-size:16px;
+
+    opacity:.9;
+
+}
+
+.time-box h2{
+
+    margin-top:8px;
+
+    font-size:32px;
+
+    letter-spacing:2px;
+
+}
 
 
