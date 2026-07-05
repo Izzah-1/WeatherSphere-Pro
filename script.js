@@ -97,7 +97,7 @@ sunset.textContent =
     });
     weatherIcon.textContent =
         getWeatherEmoji(data.weather[0].main);
-
+changeBackground(data.weather[0].main);
     getForecast(data.name);
 
 }
@@ -239,6 +239,37 @@ function getLocationWeather() {
         }
 
     );
+
+}
+function changeBackground(weather) {
+
+    document.body.className = "";
+
+    switch (weather) {
+
+        case "Clear":
+            document.body.classList.add("sunny");
+            break;
+
+        case "Clouds":
+            document.body.classList.add("cloudy");
+            break;
+
+        case "Rain":
+        case "Drizzle":
+        case "Thunderstorm":
+            document.body.classList.add("rainy");
+            break;
+
+        case "Snow":
+            document.body.classList.add("snowy");
+            break;
+
+        default:
+            document.body.classList.add("night");
+            break;
+
+    }
 
 }
 
