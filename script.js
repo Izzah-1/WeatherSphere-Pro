@@ -18,6 +18,7 @@ const sunset = document.getElementById("sunset");
 const forecastContainer = document.getElementById("forecastContainer");
 const greeting = document.getElementById("greeting");
 const localTime = document.getElementById("localTime");
+let clockInterval;
 searchBtn.addEventListener("click", () => {
     getWeather();
 });
