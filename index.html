@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <h1>🌦️ WeatherSphere Pro</h1>
+
+        <p class="subtitle">
+            Search any city in the world
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="city"
+                placeholder="Enter city name...">
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+        <div class="weather-card">
+
+            <div id="weatherIcon" class="weather-icon">
+                ☀️
+            </div>
+
+            <h2 id="cityName">
+                Islamabad
+            </h2>
+
+            <h3 id="temperature">
+                28°C
+            </h3>
+
+            <p id="description">
+                Clear Sky
+            </p>
+
+        </div>
+
+        <div class="details">
+
+            <div class="detail-card">
+                <h4>💧 Humidity</h4>
+                <p id="humidity">--%</p>
+            </div>
+
+            <div class="detail-card">
+                <h4>💨 Wind</h4>
+                <p id="wind">-- m/s</p>
+            </div>
+
+            <div class="detail-card">
+                <h4>🌡️ Pressure</h4>
+                <p id="pressure">----</p>
+            </div>
+
+            <div class="detail-card">
+                <h4>👁️ Visibility</h4>
+                <p id="visibility">-- km</p>
+            </div>
+
+        </div>
+
+        <div class="forecast">
+
+            <h2>5-Day Forecast</h2>
+
+            <div id="forecastContainer" class="forecast-container">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
