@@ -19,6 +19,7 @@ const forecastContainer = document.getElementById("forecastContainer");
 const greeting = document.getElementById("greeting");
 const localTime = document.getElementById("localTime");
 let clockInterval;
+let currentWeather = "";
 searchBtn.addEventListener("click", () => {
     getWeather();
 });
@@ -97,6 +98,7 @@ sunset.textContent =
         hour: "2-digit",
         minute: "2-digit"
     });
+    currentWeather = data.weather[0].main;
     weatherIcon.textContent =
         getWeatherEmoji(data.weather[0].main);
 changeBackground(data.weather[0].main);
