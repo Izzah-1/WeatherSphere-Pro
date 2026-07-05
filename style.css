@@ -418,4 +418,24 @@ input::placeholder{
     background: rgba(255,255,255,0.25);
 
 }
+.sunny {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.cloudy {
+    background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+}
+
+.rainy {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.snowy {
+    background: linear-gradient(135deg, #e6dada, #274046);
+}
+
+.night {
+    background: linear-gradient(135deg, #141E30, #243B55);
+}
+
 
