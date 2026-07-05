@@ -16,7 +16,8 @@ const visibility = document.getElementById("visibility");
 const sunrise = document.getElementById("sunrise");
 const sunset = document.getElementById("sunset");
 const forecastContainer = document.getElementById("forecastContainer");
-
+const greeting = document.getElementById("greeting");
+const localTime = document.getElementById("localTime");
 searchBtn.addEventListener("click", () => {
     getWeather();
 });
