@@ -98,8 +98,7 @@ sunset.textContent =
         hour: "2-digit",
         minute: "2-digit"
     });
-          minute: "2-digit"
-    });
+      
    currentWeather = data.weather[0].main;
 
 weatherIcon.textContent =
@@ -252,32 +251,44 @@ function getLocationWeather() {
 
 }
 function changeBackground(weather, hour) {
+document.body.className = "";
 
-    document.body.className = "";
+    const isNight = hour >= 20 || hour < 6;
 
     switch (weather) {
 
         case "Clear":
-            document.body.classList.add("sunny");
+            document.body.classList.add(
+                isNight ? "clear-night" : "clear-day"
+            );
             break;
 
         case "Clouds":
-            document.body.classList.add("cloudy");
+            document.body.classList.add(
+                isNight ? "clouds-night" : "clouds-day"
+            );
             break;
 
         case "Rain":
         case "Drizzle":
         case "Thunderstorm":
-            document.body.classList.add("rainy");
+            document.body.classList.add(
+                isNight ? "rain-night" : "rain-day"
+            );
             break;
 
         case "Snow":
-            document.body.classList.add("snowy");
+            document.body.classList.add(
+                isNight ? "snow-night" : "snow-day"
+            );
             break;
 
         default:
-            document.body.classList.add("night");
-            break;
+            document.body.classList.add(
+                isNight ? "clear-night" : "clear-day"
+            );
+
+    
 
     }
 
