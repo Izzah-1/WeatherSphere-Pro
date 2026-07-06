@@ -24,6 +24,8 @@ const sunset = document.getElementById("sunset");
 // EXTRA
 const greeting = document.getElementById("greeting");
 const localTime = document.getElementById("localTime");
+const weatherQuote =
+    document.getElementById("weatherQuote");
 const forecastContainer = document.getElementById("forecastContainer");
 
 let clockInterval = null;
@@ -156,6 +158,7 @@ function updateCurrentWeather(data) {
 
     weatherIcon.textContent =
         getWeatherEmoji(currentWeather);
+    updateQuote(currentWeather);
 
     humidity.textContent =
         data.main.humidity + "%";
@@ -423,3 +426,68 @@ function changeBackground(weather,hour){
     }
 
 }
+function updateQuote(weather){
+
+    let quote = "";
+
+    switch(weather){
+
+        case "Clear":
+
+            quote =
+            "☀️ Every sunrise brings a new beginning.";
+
+            break;
+
+        case "Clouds":
+
+            quote =
+            "☁️ Even behind the clouds, the sun is still shining.";
+
+            break;
+
+        case "Rain":
+
+        case "Drizzle":
+
+            quote =
+            "🌧️ Life isn't about waiting for the storm to pass—it's about learning to dance in the rain.";
+
+            break;
+
+        case "Thunderstorm":
+
+            quote =
+            "⛈️ Every storm eventually runs out of rain.";
+
+            break;
+
+        case "Snow":
+
+            quote =
+            "❄️ Snow reminds us that every season has its own beauty.";
+
+            break;
+
+        case "Mist":
+
+        case "Fog":
+
+        case "Haze":
+
+            quote =
+            "🌫️ Sometimes the path isn't clear, but keep moving forward.";
+
+            break;
+
+        default:
+
+            quote =
+            "🌍 Wherever you are, make today amazing.";
+
+    }
+
+    weatherQuote.textContent = quote;
+
+}
+
